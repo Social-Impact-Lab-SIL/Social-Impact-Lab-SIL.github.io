@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Impact Lab (SIL)</title>
+    <style>
+        :root {
+            --accent: #0366d6;
+            --accent-bg: #f1f8ff;
+            --accent-border: #c8e1ff;
+            --border: #e1e4e8;
+            --text-main: #24292e;
+            --text-muted: #586069;
+            --code-bg: #f6f8fa;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+            background-color: #f6f8fa;
+        }
+        .container {
+            background-color: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 40px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        /* Dropdown Navigation Styles */
+        #sil-nav-container {
+            margin-bottom: 24px;
+            position: relative;
+            display: inline-block;
+            text-align: left;
+        }
+        .sil-nav-btn {
+            background-color: var(--accent-bg);
+            color: var(--accent);
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border: 1px solid var(--accent-border);
+            border-radius: 6px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .sil-dropdown-menu {
+            position: absolute;
+            left: 0;
+            top: 100%;
+            background-color: #ffffff;
+            min-width: 260px;
+            box-shadow: 0 8px 24px rgba(149, 157, 165, 0.2);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            z-index: 1000;
+            margin-top: 4px;
+            overflow: hidden;
+            text-align: left;
+            display: none;
+        }
+        .sil-dropdown-menu.show {
+            display: block;
+        }
+        .sil-dropdown-menu a {
+            color: var(--text-main);
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+        .sil-dropdown-menu a:last-child {
+            border-bottom: none;
+        }
+        .sil-dropdown-menu a:hover {
+            background-color: var(--code-bg);
+            text-decoration: none;
+        }
+
+        h1 {
+            font-size: 2em;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+            margin-top: 0;
+        }
+        h2 {
+            font-size: 1.4em;
+            margin-top: 36px;
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 0.3em;
+        }
+        h3 {
+            font-size: 1.15em;
+            margin-top: 24px;
+            color: var(--text-main);
+        }
+        p {
+            margin-bottom: 16px;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            background: #e1e4e8;
+            margin: 30px 0;
+        }
+        .portals-box {
+            background-color: var(--accent-bg);
+            border: 1px solid var(--accent-border);
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .portals-box ul {
+            margin-bottom: 0;
+        }
+        .contact-box {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 16px 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Click-to-Toggle Dropdown Navigation Menu -->
+    <div id="sil-nav-container">
+        <button id="sil-nav-btn" class="sil-nav-btn" onclick="toggleSilDropdown(event)">
+            📁 SIL Navigation <span id="sil-arrow">▾</span>
+        </button>
+        <div id="sil-dropdown" class="sil-dropdown-menu">
+            <a href="https://github.com/Social-Impact-Lab-SIL" target="_blank" rel="noopener noreferrer">🌐 SIL GitHub Organization</a>
+            <a href="https://social-impact-lab-sil.github.io/SIL-Publications-Archive/" target="_blank" rel="noopener noreferrer">📚 Publications Archive</a>
+            <a href="https://social-impact-lab-sil.github.io/SIL-Data-Repository/" target="_blank" rel="noopener noreferrer">📁 Data Repository</a>
+            <a href="https://social-impact-lab-sil.github.io/SIL-Publication-Dashboard/" target="_blank" rel="noopener noreferrer">📊 Lab Dashboard</a>
+        </div>
+    </div>
+
+    <h1>Social Impact Lab (SIL)</h1>
+    <p>The Social Impact Lab is a dynamic, multidisciplinary research community dedicated to turning innovative ideas into rigorous research that improves population health and well-being. Our research frequently utilizes policy and population-level datasets, quasi-experimental study designs, and advanced statistical methods to produce causal insights that inform decision-making and policy development. Our efforts are guided by commitments to open dialogue, rigor, integrity, ingenuity, and knowledge-sharing. The lab includes a well-resourced research team housed at the University of Missouri, as well as a national affiliate program. The lab is funded by the University of Missouri.</p>
+
+    <hr>
+
+    <h2>Lab Portals & Repositories</h2>
+    <div class="portals-box">
+        <ul>
+            <li><strong><a href="https://social-impact-lab-sil.github.io/SIL-Publications-Archive/" target="_blank">SIL Publications Archive</a></strong> — Replication materials for publications and submitted manuscripts.</li>
+            <li><strong><a href="https://social-impact-lab-sil.github.io/SIL-Data-Repository/" target="_blank">SIL Data Repository</a></strong> — Data and codebooks associated with our empirical studies.</li>
+            <li><strong><a href="https://social-impact-lab-sil.github.io/SIL-Publication-Dashboard/" target="_blank">Lab Dashboard & Tools</a></strong> — Interactive publication data visualization.</li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <h2>Our Research Cores</h2>
+    <p>The lab is structured into three core areas—Economics, Law & Policy, and Public Health—each of which supports independent research while contributing expertise across cores to foster collaboration, enhance research outputs, and broaden impact.</p>
+
+    <h3>Economics</h3>
+    <p>The Economics Core primarily uses observational data and natural experiments to identify causal parameters of relationships that can ultimately improve population health and wellbeing.</p>
+
+    <h3>Public Health</h3>
+    <p>The Public Health Core studies how policies, systems, and environments impact health and well-being by drawing upon diverse methodologies. The Core curates a wide array of datasets, synthesizes evidence for dissemination, and conducts research that enriches insights into complex issues.</p>
+
+    <h3>Law & Policy</h3>
+    <p>The Law & Policy Core studies how policies and laws impact health and well-being through legal mapping, policy surveillance, legal epidemiology, and other related methods.</p>
+
+    <hr>
+
+    <h2>Our Approach</h2>
+
+    <h3>Evidence Generation</h3>
+    <p>At the core of our work is a commitment to rigorous, evidence-based research. Lab-supported research prioritizes quality over speed or volume. We strive to produce research on timely and under-explored topics, and encourage exploration of high-risk, high-reward questions that are often under-incentivized but hold the potential for transformative impact.</p>
+
+    <h3>Facilitating Collaboration, Community, and Network</h3>
+    <p>The Lab brings together a community of researchers from a variety of disciplines that are united by a shared interest in social and population impacts. A hallmark of the lab is a structured discussion series to sharpen early-stage research ideas. The lab fosters an atmosphere of respect and mutual support through a code of conduct that emphasizes research best practices and safeguarding research contributions. Each core—Economics, Law & Policy, and Public Health—offers core-specific programming to meet unique needs of different affiliates.</p>
+
+    <h3>Sharing Research</h3>
+    <p>We believe in the power of knowledge-sharing to catalyze change. Our Lab is committed to disseminating research findings, fostering dialogue, and engaging with diverse audiences, including policymakers, practitioners, and the public. By doing so, we aim to inform and inspire evidence-based decision-making and policy development. We make our research, databases and resources publicly accessible to demystify our research for the public and to empower the broader research community to build upon our work.</p>
+
+    <hr>
+
+    <h2>Licensing & Usage</h2>
+    <p>Unless otherwise specified, code and data repositories within the Social Impact Lab organization are made available under open-source licenses (such as the MIT License). Please refer to individual repository documentation for specific citation requirements.</p>
+
+    <div class="contact-box">
+        <h3 style="margin-top: 0;">Contact</h3>
+        <p style="margin-bottom: 0;">Email: <a href="mailto:socialimpactlab@missouri.edu">socialimpactlab@missouri.edu</a></p>
+    </div>
+</div>
+
+<!-- Dropdown Toggle Script & Outside Click Handler -->
+<script>
+    function toggleSilDropdown(event) {
+        event.stopPropagation();
+        const dropdown = document.getElementById('sil-dropdown');
+        const arrow = document.getElementById('sil-arrow');
+        const isOpen = dropdown.classList.contains('show');
+        
+        if (isOpen) {
+            dropdown.classList.remove('show');
+            arrow.textContent = '▾';
+        } else {
+            dropdown.classList.add('show');
+            arrow.textContent = '▴';
+        }
+    }
+
+    window.addEventListener('click', function(event) {
+        const container = document.getElementById('sil-nav-container');
+        const dropdown = document.getElementById('sil-dropdown');
+        const arrow = document.getElementById('sil-arrow');
+        
+        if (!container.contains(event.target)) {
+            dropdown.classList.remove('show');
+            arrow.textContent = '▾';
+        }
+    });
+</script>
+
+</body>
+</html>
