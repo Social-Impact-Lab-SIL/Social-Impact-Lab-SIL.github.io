@@ -18,7 +18,7 @@ export default function HearingData() {
       <p>Private insurance hearing aid mandates have been adopted by an increasing number of states and vary in age eligibility and generosity. This project describes the details of private insurance hearing aid mandates for each state over time.</p>
       
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/hear_priv_V2.xlsx" download>Download hear_priv_V2.xlsx</a></strong> <em>(Excel Workbook)</em>
+        <strong><a href="/data/hear_priv_v1.xlsx" download>Download hear_priv_v1.xlsx</a></strong> <em>(Excel Workbook)</em>
       </div>
       
       <p className="citation-note" style={{ fontWeight: 600, marginTop: '16px' }}>Associated Publication:</p>
@@ -38,7 +38,7 @@ export default function HearingData() {
       <p>This dataset tracks cross-sectional parameters of state Medicaid hearing aid coverage provisions for adults.</p>
       
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/hear_mcaidcross_V2.xlsx" download>Download hear_mcaidcross_V2.xlsx</a></strong> <em>(Excel Workbook)</em>
+        <strong><a href="/data/hear_mcaidcross_v1.1.xlsx" download>Download hear_mcaidcross_v1.1.xlsx</a></strong> <em>(Excel Workbook)</em>
       </div>
 
       <p className="citation-note" style={{ fontWeight: 600, marginTop: '16px' }}>Associated Publication:</p>
