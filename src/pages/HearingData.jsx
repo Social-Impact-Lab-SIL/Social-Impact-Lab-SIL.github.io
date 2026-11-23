@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
+import { trackDatasetDownload } from '../utils/analytics';
 
 export default function HearingData() {
+  const handleDownload = (fileName, fileUrl) => {
+    trackDatasetDownload({
+      fileName,
+      datasetGroup: 'hearing_healthcare',
+      fileUrl,
+      actionType: 'download',
+    });
+  };
+
   return (
     <div>
       <div>
@@ -16,11 +26,19 @@ export default function HearingData() {
 
       <h2>1. Private Insurance Hearing Aid Mandates</h2>
       <p>Private insurance hearing aid mandates have been adopted by an increasing number of states and vary in age eligibility and generosity. This project describes the details of private insurance hearing aid mandates for each state over time.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/hear_priv_v1.xlsx" download>Download hear_priv_v1.xlsx</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/hear_priv_v1.xlsx"
+            download
+            onClick={() => handleDownload('hear_priv_v1.xlsx', '/data/hear_priv_v1.xlsx')}
+          >
+            Download hear_priv_v1.xlsx
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
-      
+
       <p className="citation-note" style={{ fontWeight: 600, marginTop: '16px' }}>Associated Publication:</p>
       <blockquote style={{ background: 'var(--code-bg)', borderLeft: '4px solid var(--border)', margin: '0 0 15px 0', padding: '12px 16px', color: 'var(--text-muted)', borderRadius: '0 4px 4px 0' }}>
         Arnold, M. L., Heslin, B. J., Dowdy, M., Kershner, S. P., Phillips, S., Lipton, B., & Pesko, M. F. (2024). Longitudinal Policy Surveillance of Private Insurance Hearing Aid Mandates in the United States: 1997-2022. <i>American Journal of Public Health</i>, 114(4), 407–414. <a href="https://doi.org/10.2105/AJPH.2023.307551" target="_blank" rel="noopener noreferrer">https://doi.org/10.2105/AJPH.2023.307551</a> | <a href="https://pubmed.ncbi.nlm.nih.gov/38478867/" target="_blank" rel="noopener noreferrer">PubMed</a>
@@ -36,9 +54,17 @@ export default function HearingData() {
 
       <h2>2. Key Policy Features of State Medicaid Hearing Aid Coverage for Adults, 2023</h2>
       <p>This dataset tracks cross-sectional parameters of state Medicaid hearing aid coverage provisions for adults.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/hear_mcaidcross_v1.1.xlsx" download>Download hear_mcaidcross_v1.1.xlsx</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/hear_mcaidcross_v1.1.xlsx"
+            download
+            onClick={() => handleDownload('hear_mcaidcross_v1.1.xlsx', '/data/hear_mcaidcross_v1.1.xlsx')}
+          >
+            Download hear_mcaidcross_v1.1.xlsx
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
 
       <p className="citation-note" style={{ fontWeight: 600, marginTop: '16px' }}>Associated Publication:</p>
@@ -52,9 +78,17 @@ export default function HearingData() {
 
       <h2>3. Longitudinal Trends in Medicaid Hearing Aid Coverage for Adults in the United States: 2003-2023</h2>
       <p>This longitudinal dataset provides monthly tracking of state Medicaid hearing aid coverage determinations.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/hear_mcaidlong_V1.xlsx" download>Download hear_mcaidlong_V1.xlsx</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/hear_mcaidlong_V1.xlsx"
+            download
+            onClick={() => handleDownload('hear_mcaidlong_V1.xlsx', '/data/hear_mcaidlong_V1.xlsx')}
+          >
+            Download hear_mcaidlong_V1.xlsx
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
 
       <p className="citation-note" style={{ fontWeight: 600, marginTop: '16px' }}>Associated Publication:</p>
@@ -72,9 +106,17 @@ export default function HearingData() {
 
       <h2>4. Hearing Health Care Professional Workforce</h2>
       <p>This dataset provides state-level counts and supply-demand metrics mapping the hearing healthcare professional workforce.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/hear_prof_V1.xlsx" download>Download hear_prof_V1.xlsx</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/hear_prof_V1.xlsx"
+            download
+            onClick={() => handleDownload('hear_prof_V1.xlsx', '/data/hear_prof_V1.xlsx')}
+          >
+            Download hear_prof_V1.xlsx
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
 
       <p className="citation-note" style={{ fontWeight: 600, marginTop: '16px' }}>Associated Publication:</p>

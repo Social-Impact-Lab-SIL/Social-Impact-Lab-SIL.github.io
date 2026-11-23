@@ -1,6 +1,16 @@
 import { Link } from 'react-router-dom';
+import { trackDatasetDownload } from '../utils/analytics';
 
 export default function TobaccoData() {
+  const handleDownload = (fileName, fileUrl) => {
+    trackDatasetDownload({
+      fileName,
+      datasetGroup: 'tobacco_policies',
+      fileUrl,
+      actionType: 'download',
+    });
+  };
+
   return (
     <div>
       <div>
@@ -16,10 +26,23 @@ export default function TobaccoData() {
 
       <h2>1. E-Cigarette Taxes</h2>
       <p>E-cigarette tax schemes vary significantly across states and localities, making cross-sectional and longitudinal comparisons challenging. This project provides standardized e-cigarette tax rates at the state and local levels in the United States.</p>
-      
+
       <h3>Version 2 (2010–2023)</h3>
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/E-cig%20Tax%20Version%202,%202010-2023.xlsx" download>Download E-Cigarette Tax Data Version 2 (2010-2023)</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/E-cig%20Tax%20Version%202,%202010-2023.xlsx"
+            download
+            onClick={() =>
+              handleDownload(
+                'E-cig Tax Version 2, 2010-2023.xlsx',
+                '/data/E-cig%20Tax%20Version%202,%202010-2023.xlsx'
+              )
+            }
+          >
+            Download E-Cigarette Tax Data Version 2 (2010-2023)
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
       <p><strong>Data Description:</strong></p>
       <ul>
@@ -33,7 +56,20 @@ export default function TobaccoData() {
 
       <h3>Version 1 (2010–2020)</h3>
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/E-cig%20Tax%20Version%201,%202010-2020.xlsx" download>Download E-Cigarette Tax Data Version 1 (2010-2020)</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/E-cig%20Tax%20Version%201,%202010-2020.xlsx"
+            download
+            onClick={() =>
+              handleDownload(
+                'E-cig Tax Version 1, 2010-2020.xlsx',
+                '/data/E-cig%20Tax%20Version%201,%202010-2020.xlsx'
+              )
+            }
+          >
+            Download E-Cigarette Tax Data Version 1 (2010-2020)
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
       <p><strong>Data Description:</strong></p>
       <ul>
@@ -50,9 +86,22 @@ export default function TobaccoData() {
 
       <h2>2. Cigar Taxes</h2>
       <p>This project provides standardized cigar tax rates at the state and local levels in the United States, addressing cross-jurisdictional variations in tax structures.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/Standardized%20Cigar%20Taxes,%20Version%201,%202010-2024.xlsx" download>Download Standardized Cigar Taxes Version 1 (2010-2024)</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/Standardized%20Cigar%20Taxes,%20Version%201,%202010-2024.xlsx"
+            download
+            onClick={() =>
+              handleDownload(
+                'Standardized Cigar Taxes, Version 1, 2010-2024.xlsx',
+                '/data/Standardized%20Cigar%20Taxes,%20Version%201,%202010-2024.xlsx'
+              )
+            }
+          >
+            Download Standardized Cigar Taxes Version 1 (2010-2024)
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
       <p><strong>Data Description:</strong></p>
       <ul>
@@ -68,9 +117,22 @@ export default function TobaccoData() {
 
       <h2>3. Flavored Tobacco Product Sales Restrictions</h2>
       <p>This longitudinal dataset describes state and national population coverage and comprehensiveness of flavored tobacco sales from 2010 to 2023 for e-cigarettes, cigarettes, cigars, and smokeless tobacco.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/Flavored%20Tobacco%20Product%20Sales%20Restrictions,%20Version%201,%202010-2023.xlsx" download>Download Flavored Tobacco Product Sales Restrictions Version 1 (2010-2023)</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/Flavored%20Tobacco%20Product%20Sales%20Restrictions,%20Version%201,%202010-2023.xlsx"
+            download
+            onClick={() =>
+              handleDownload(
+                'Flavored Tobacco Product Sales Restrictions, Version 1, 2010-2023.xlsx',
+                '/data/Flavored%20Tobacco%20Product%20Sales%20Restrictions,%20Version%201,%202010-2023.xlsx'
+              )
+            }
+          >
+            Download Flavored Tobacco Product Sales Restrictions Version 1 (2010-2023)
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
       <p><strong>Data Description:</strong></p>
       <ul>
@@ -83,12 +145,25 @@ export default function TobaccoData() {
       </blockquote>
 
       <hr />
-      
+
       <h2>4. Vaping and Smoking Indoor Air Laws</h2>
       <p>This database reports US national- and state-level estimates of population coverage of comprehensive and partial indoor smoking restrictions from 1990 to 2021 for bars, restaurants, and workplaces, and comprehensive indoor vaping restrictions from 2006 to 2021 for the same locations. Estimates were calculated using policy data from the American Nonsmokers' Rights Foundation.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/Vaping%20and%20Smoking%20Indoor%20Air%20Laws%20Version%201,%202010-2021.xlsx" download>Download Vaping and Smoking Indoor Air Laws Version 1 (2010-2021)</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/Vaping%20and%20Smoking%20Indoor%20Air%20Laws%20Version%201,%202010-2021.xlsx"
+            download
+            onClick={() =>
+              handleDownload(
+                'Vaping and Smoking Indoor Air Laws Version 1, 2010-2021.xlsx',
+                '/data/Vaping%20and%20Smoking%20Indoor%20Air%20Laws%20Version%201,%202010-2021.xlsx'
+              )
+            }
+          >
+            Download Vaping and Smoking Indoor Air Laws Version 1 (2010-2021)
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
       <p><strong>Data Description:</strong></p>
       <ul>
@@ -105,9 +180,17 @@ export default function TobaccoData() {
 
       <h2>5. Specialty Tobacco Retail Locations and Visitor Counts</h2>
       <p>This dataset maps specialty tobacco retail locations and consumer foot traffic patterns across the United States. Match rates and visitor counts are restricted to only the top decile by population.</p>
-      
+
       <div className="dashboard-box" style={{ background: 'var(--code-bg)' }}>
-        <strong><a href="/data/StateCountyData2024.xlsx" download>Download StateCountyData2024.xlsx</a></strong> <em>(Excel Workbook)</em>
+        <strong>
+          <a
+            href="/data/StateCountyData2024.xlsx"
+            download
+            onClick={() => handleDownload('StateCountyData2024.xlsx', '/data/StateCountyData2024.xlsx')}
+          >
+            Download StateCountyData2024.xlsx
+          </a>
+        </strong> <em>(Excel Workbook)</em>
       </div>
       <p><strong>Data Description:</strong></p>
       <ul>
